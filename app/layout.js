@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl">
       <body
-        className={`${yekan.className} antialiased`}
+        className={`${yekan.className} max-w-[1440px] mx-auto antialiased`}
       >
         {children}
       </body>
