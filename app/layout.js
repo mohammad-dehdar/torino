@@ -1,5 +1,8 @@
-import { yekan } from "@/core/utils/fonts";
+import TanstackProvider from "@/components/provider/TanstackProvider";
 import "./globals.css";
+import { yekan } from "@/core/utils/fonts";
+import Header from "@/components/templates/layouts/Header";
+import Footer from "@/components/templates/layouts/Footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -7,12 +10,17 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en" dir="rtl">
       <body
-        className={`${yekan.className} max-w-[1440px] mx-auto antialiased`}
+        className={`${yekan.className} mx-auto font-medium antialiased`}
       >
-        {children}
+        <TanstackProvider>
+          <Header />
+          <main className="min-h-svh">{children}</main>
+          <Footer />
+        </TanstackProvider>
       </body>
     </html>
   );
