@@ -10,3 +10,7 @@
   --secondary-color : #10411B;
   --complementary-color : #009eca;
 }
+
+.selected {
+  color: var(--primary-color);
+}
