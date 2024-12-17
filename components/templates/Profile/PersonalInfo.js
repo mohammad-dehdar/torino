@@ -33,14 +33,14 @@ const PersonalInfo = ({ userInfo, handleChange, handleSave, setEditSection, edit
                         value={userInfo.birthDate}
                         onChange={handleChange}
                     />
-                    <div className="space-y-1 md:mt-4 md:w-[255px]">
+                    <div className="space-y-1 mt-4 md:w-[255px]">
                         <select
                             name="gender"
                             value={userInfo.gender}
                             onChange={handleChange}
                             className="w-full border p-2 rounded"
                         >
-                            <option value="">انتخاب کنید</option>
+                            <option value="">جنسیت</option>
                             <option value="male">مرد</option>
                             <option value="female">زن</option>
                             <option value="other">سایر</option>
