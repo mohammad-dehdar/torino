@@ -25,6 +25,7 @@ const PersonalInfo = ({ userInfo, handleChange, handleSave, setEditSection, edit
                         name="nationalCode"
                         value={userInfo.nationalCode}
                         onChange={handleChange}
+                        className="my-4"
                     />
                     <CustomInput
                         type="text"

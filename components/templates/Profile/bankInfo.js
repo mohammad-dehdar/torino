@@ -15,21 +15,22 @@ const BankInfo = ({ userInfo, handleChange, handleSave, setEditSection, editSect
             {editSection === "bank" ? (
                 <>
                     <CustomInput
-                        label="شماره کارت"
+                        placeholder="شماره کارت"
                         type="text"
                         name="cardNumber"
                         value={userInfo.cardNumber}
                         onChange={handleChange}
                     />
                     <CustomInput
-                        label="شماره شبا"
+                        placeholder="شماره شبا"
                         type="text"
                         name="shabaNumber"
                         value={userInfo.shabaNumber}
                         onChange={handleChange}
-                    />
+                        className="my-4"
+                        />
                     <CustomInput
-                        label="شماره حساب"
+                        placeholder="شماره حساب"
                         type="text"
                         name="accountNumber"
                         value={userInfo.accountNumber}
