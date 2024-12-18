@@ -11,6 +11,7 @@
   "dependencies": {
     "@tanstack/react-query": "^5.62.7",
     "axios": "^1.7.9",
+    "jalaali-react-date-picker": "^1.0.19",
     "next": "14.2.18",
     "react": "^18",
     "react-dom": "^18",

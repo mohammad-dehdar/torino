@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       >
         <TanstackProvider>
           <Header />
-          <main className="min-h-svh">{children}</main>
+          <main className="min-h-svh md:max-w-[1440px] mx-auto">{children}</main>
           <Footer />
         </TanstackProvider>
       </body>

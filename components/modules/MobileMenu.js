@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const navbar = [
     { id: 1, href: "/", title: "صفحه اصلی", icon: "/icons/home-2.svg" },
@@ -12,6 +13,7 @@ const navbar = [
 ];
 function MobileMenu() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     return (
         <>
@@ -32,18 +34,22 @@ function MobileMenu() {
             {isMenuOpen && (
                 <div
                     className="fixed top-0 left-0 w-full h-screen bg-black/50 z-50"
-                    onClick={() => setIsMenuOpen(false)} 
+                    onClick={() => setIsMenuOpen(false)} // کلیک روی Overlay، منو را می‌بندد
                 >
                     {/* منو */}
                     <div
-                        className="fixed top-0 right-0 w-1/2 h-screen bg-white shadow-lg pt-8 px-3 rounded-l-2xl"
-                        onClick={(e) => e.stopPropagation()} 
+                        className="fixed top-0 right-0 w-64 h-screen bg-white shadow-lg p-6"
+                        onClick={(e) => e.stopPropagation()} // جلوگیری از بسته‌شدن هنگام کلیک روی خود منو
                     >
                         <ul className="flex flex-col gap-6">
                             {navbar.map((item) => (
                                 <li
                                     key={item.id}
-                                    className="flex  gap-4 hover:text-primary transition"
+                                    className={`flex items-center gap-4 transition ${
+                                        pathname === item.href
+                                            ? "text-primary font-bold" // لینک فعال
+                                            : "text-black"
+                                    }`}
                                 >
                                     <Image
                                         src={item.icon}
@@ -53,8 +59,7 @@ function MobileMenu() {
                                     />
                                     <Link
                                         href={item.href}
-                                        onClick={() => setIsMenuOpen(false)} 
-                                        className="mt-1"
+                                        onClick={() => setIsMenuOpen(false)} // بستن منو بعد از کلیک
                                     >
                                         {item.title}
                                     </Link>

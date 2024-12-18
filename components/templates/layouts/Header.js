@@ -14,40 +14,42 @@ const navbar = [
 
 function Header() {
     return (
-        <header className="flex justify-between px-8 md:px-10 py-4 items-center border shadow-md shadow-black/10 relative">
-            <div className="flex md:items-center md:gap-16">
-                {/* لوگو */}
-                <Link href={"/"}>
-                    <Image
-                        src={"/images/logo.png"}
-                        width={146}
-                        height={44}
-                        alt="تورینو"
-                        priority
-                        className="hidden md:block"
-                    />
-                </Link>
+        <header className=" px-8 py-4  border shadow-md shadow-black/10 relative">
+            <div className="flex justify-between items-center max-w-[1440px] mx-auto">
+                <div className="flex md:items-center md:gap-16">
+                    {/* لوگو */}
+                    <Link href={"/"}>
+                        <Image
+                            src={"/images/logo.png"}
+                            width={146}
+                            height={44}
+                            alt="تورینو"
+                            priority
+                            className="hidden md:block"
+                        />
+                    </Link>
 
-                {/* ناوبری دسکتاپ */}
-                <nav>
-                    <ul className="hidden md:flex gap-8">
-                        {navbar.map((item) => (
-                            <li
-                                key={item.id}
-                                className="transition-all ease-out hover:text-primary"
-                            >
-                                <Link href={item.href}>{item.title}</Link>
-                            </li>
-                        ))}
-                    </ul>
+                    {/* ناوبری دسکتاپ */}
+                    <nav>
+                        <ul className="hidden md:flex gap-8">
+                            {navbar.map((item) => (
+                                <li
+                                    key={item.id}
+                                    className="transition-all ease-out hover:text-primary"
+                                >
+                                    <Link href={item.href}>{item.title}</Link>
+                                </li>
+                            ))}
+                        </ul>
 
-                    {/* منوی موبایل */}
-                    <MobileMenu />
-                </nav>
+                        {/* منوی موبایل */}
+                        <MobileMenu />
+                    </nav>
+                </div>
+
+                {/* فرم ورود */}
+                <AuthForm />
             </div>
-
-            {/* فرم ورود */}
-            <AuthForm />
         </header>
     );
 }

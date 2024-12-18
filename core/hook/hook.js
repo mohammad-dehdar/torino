@@ -60,5 +60,23 @@ const useUpdateProfile = () => {
     // });
 };
 
+const fetchTours = async (params) => {
+    const { data } = await api.get("/tour", { params });
+    return data;
+};
 
-export { useCheckOtp, useSendOtp, useGetProfile, useUpdateProfile }
+const useGetTours = (params) => {
+    const queryKey = ["tour", params];
+
+    return useQuery({
+        queryKey,
+        queryFn: () => fetchTours(params),
+        enabled: !!params, // فقط زمانی درخواست ارسال شود که params تعریف شده باشد
+        onError: (error) => {
+            console.error("خطا در دریافت تورها:", error);
+        },
+    });
+};
+
+
+export { useCheckOtp, useSendOtp, useGetProfile, useUpdateProfile, useGetTours }
