@@ -1,16 +1,10 @@
-import localFont from "next/font/local";
+import TanstackQueryProvider from "@/components/partials/providers/TanstackQueryProvider";
 import "./globals.css";
+import { yekan } from "@/core/utils/fonts";
+import Header from "@/components/templates/header";
+import Footer from "@/components/templates/footer";
+import { Toaster } from "react-hot-toast";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -19,12 +13,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" dir="rtl">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${yekan.className}`}
       >
-        {children}
+        <TanstackQueryProvider>
+          <Header />
+          <main className="min-h-svh"> {children} </main>
+          <Footer />
+        </TanstackQueryProvider>
+        <Toaster/>
       </body>
+
     </html>
   );
 }
