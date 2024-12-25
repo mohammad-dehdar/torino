@@ -6,7 +6,7 @@ import Link from "next/link"
 function Footer() {
   return (
     <div className="border-t mx-auto">
-      <div className="mx-auto px-8 divide-y-2 max-sm:divide-dashed">
+      <div className="mx-auto max-w-[1440px] px-8 divide-y-2 max-sm:divide-dashed">
         <div>
           <div className="md:flex justify-between py-6 md:py-12">
             {
@@ -27,11 +27,11 @@ function Footer() {
           <div className="flex justify-between md:justify-start mb-4 md:mb-0  gap-10 col-span-2 md:col-span-1">
             <ul>
               <p className="text-[22px] md:text-2xl font-semibold mb-8">تورینو</p>
-              {torino.map((item) => <li key={item.id} className="md:text-lg font-normal mb-3"><Link href={item.href}>{item.title}</Link></li>)}
+              {torino.map((item) => <li key={item.id} className="md:text-lg font-normal mb-3 transition-all hover:text-primary ease-out"><Link href={item.href}>{item.title}</Link></li>)}
             </ul>
             <ul>
               <p className="text-[22px] md:text-2xl font-semibold mb-8">خدمات مشتریان</p>
-              {services.map((item) => <li key={item.id} className="md:text-lg font-normal mb-3"><Link href={item.href}>{item.title}</Link></li>)}
+              {services.map((item) => <li key={item.id} className="md:text-lg font-normal mb-3 transition-all hover:text-primary ease-out"><Link href={item.href}>{item.title}</Link></li>)}
             </ul>
           </div>
           <div className="flex md:flex-col-reverse justify-between items-end col-span-2 gap-5">
@@ -46,7 +46,7 @@ function Footer() {
         </div>
       </div>
       <div className="border-t text-center py-2">
-        developed by <Link className="text-secondary bg-primary px-1 rounded-md transition-color hover:bg-secondary hover:text-primary ease-out" href={"https://github.com/mohammad-dehdar"}>Mohammad Dehdar</Link>
+        developed by <Link className="" href={"https://github.com/mohammad-dehdar"}>Mohammad Dehdar</Link>
       </div>
     </div>
   )

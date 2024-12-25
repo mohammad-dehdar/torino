@@ -50,7 +50,7 @@ function SendOTPForm({ mobile, setMobile, setStep, setIsOpen }) {
         />
       </div>
       {!!error && <p className="text-red-500 mt-2">{error}</p>}
-      <button type='submit' className='mt-8 w-[300px]  h-[54px] bg-primary rounded-lg text-white text-lg font-medium transition-colors ease-out hover:bg-secondary'>ارسال کد تایید</button>
+      <button type='submit' className='mt-8 w-[300px] md:w-[491px]  h-[54px] bg-primary rounded-lg text-white text-lg font-medium transition-colors ease-out hover:bg-secondary'>ارسال کد تایید</button>
     </form>
   );
 }

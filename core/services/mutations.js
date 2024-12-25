@@ -24,6 +24,41 @@ const useCheckOtp = () => {
   return useMutation({ mutationFn, onSuccess });
 };
 
+const useUpdateBankAccount = () => {
+  const queryClient = useQueryClient();
+
+  const mutationFn = (data) => api.put("user/profile", data);
+
+  const onSuccess = () => {
+    queryClient.invalidateQueries({ queryKey: ["user-data"] });
+  };
+
+  return useMutation({ mutationFn, onSuccess });
+};
+
+const useUpdatePersonalData = () => {
+  const queryClient = useQueryClient();
+
+  const mutationFn = (data) => api.put("user/profile", data);
+
+  const onSuccess = () => {
+    queryClient.invalidateQueries({ queryKey: ["user-data"] });
+  };
+
+  return useMutation({ mutationFn, onSuccess });
+};
 
 
-export { useSendOtp, useCheckOtp,  };
+const useUpdateAccountInfo = () => {
+  const queryClient = useQueryClient();
+
+  const mutationFn = (data) => api.put("user/profile", data);
+
+  const onSuccess = () => {
+      queryClient.invalidateQueries({ queryKey: ["user-data"] });
+  };
+
+  return useMutation({ mutationFn, onSuccess });
+};
+
+export { useSendOtp, useCheckOtp, useUpdateBankAccount, useUpdatePersonalData, useUpdateAccountInfo };

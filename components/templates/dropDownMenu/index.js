@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 
@@ -22,13 +23,13 @@ function DropDownMenu({ mobile }) {
                     </svg>
                     <span className="leading-5">{mobile}</span>
                 </p>
-                <a href="#" className="flex items-center gap-2 px-4 py-3 text-xs hover:bg-gray-100" role="menuitem">
+                <Link href="/profile    " className="flex items-center gap-2 px-4 py-3 text-xs hover:bg-gray-100" role="menuitem">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                         <circle cx="12" cy="7" r="4"></circle>
                     </svg>
                     <span onClick={() => router.push("/profile")}>اطلاعات حساب کاربری</span>
-                </a>
+                </Link>
                 <a href="#" className="flex items-center gap-2 px-4 py-3 text-xs text-rose-600 hover:bg-gray-100" role="menuitem">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
