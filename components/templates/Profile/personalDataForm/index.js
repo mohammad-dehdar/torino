@@ -146,7 +146,7 @@ function PersonalDataForm({ data }) {
                     </div>
                 </>
             ) : (
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-[15px]'>
                     <div className='flex justify-between md:justify-start gap-3'>
                         <p className='font-medium'>نام و نام خانوادگی</p>
                         <p className='font-light'>{data?.firstName || "-"} {data?.lastName || "-"}</p>

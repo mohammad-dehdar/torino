@@ -61,4 +61,6 @@ const useUpdateAccountInfo = () => {
   return useMutation({ mutationFn, onSuccess });
 };
 
+
+
 export { useSendOtp, useCheckOtp, useUpdateBankAccount, useUpdatePersonalData, useUpdateAccountInfo };

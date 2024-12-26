@@ -3,7 +3,7 @@ import React from 'react'
 
 function CommercialBanner() {
     return (
-        <div className='max-w-[1440px] mx-8 md:mx-auto md:h-[251px] mt-20 flex max-sm:flex-col border border-r-none rounded-[10px]'>
+        <div className='hidden max-w-[1440px] mx-8 md:mx-auto md:h-[251px] mt-20 flex max-sm:flex-col border border-r-none rounded-[10px]'>
             <div className='h-full md:w-4/6 pr-4 pt-4 md:pt-0 md:pr-20 bg-primary flex flex-col md:gap-4 rounded-t-[10px] md:rounded-[10px] relative'>
                 <p className='text-[22px] md:text-5xl font-extrabold text-white md:mt-12'>خرید تلفنی از <span className='text-[#10411B]'>تورینو</span></p>
                 <span className='text-white text-[14px] md:text-[32px] font-normal mb-12 md:mb-0'>به هرکجا که میخواهید!</span>

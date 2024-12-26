@@ -77,7 +77,7 @@ function BankAccountForm({ data }) {
                 </>
             ) : (
                 <div className='p-4'>
-                    <div className='flex max-sm:flex-col md:justify-between gap-2 md:*:w-full md:gap-4 *:rounded-[5px]'>
+                    <div className='flex text-[15px] max-sm:flex-col md:justify-between gap-2 md:*:w-full md:gap-4 *:rounded-[5px]'>
                         <div className='flex gap-2 justify-between md:justify-start text-center'>
                             <p className='font-medium'>شماره کارت:</p>
                             <p className='font-light'>{data?.payment?.debitCard_code || "-"}</p>

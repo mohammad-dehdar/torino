@@ -41,7 +41,7 @@ function MobileMenu() {
                     onClick={() => setIsMenuOpen(false)}
                 >
                     <div
-                        className="fixed top-0 right-0 w-64 h-screen bg-white shadow-lg p-6"
+                        className="fixed top-0 right-0 w-1/2 h-screen bg-white shadow-lg p-6 rounded-l-2xl"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <ul className="flex flex-col gap-6">
