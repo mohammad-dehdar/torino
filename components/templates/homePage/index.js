@@ -3,8 +3,7 @@ import Banner from './Banner'
 import CommercialBanner from './CommercialBanner'
 import SearchForm from '../searchForm'
 import Tourlist from '../tourList'
-
-
+import WhyTorino from '../whyTorino/index.js'
 
 
 function HomePage({data}) {
@@ -14,6 +13,7 @@ function HomePage({data}) {
         <SearchForm/>
         <Tourlist toursData={data}/>
         <CommercialBanner/>
+        <WhyTorino/>
     </div>
   )
 }

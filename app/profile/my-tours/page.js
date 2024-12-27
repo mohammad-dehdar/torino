@@ -1,9 +1,8 @@
+import MyTours from '@/components/templates/Profile/myTours';
 import React from 'react'
 
 function page() {
-  return (
-    <div>تورها</div>
-  )
+  return (<MyTours/>)
 }
 
-export default page
+export default page;

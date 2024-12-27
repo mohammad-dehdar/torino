@@ -9,7 +9,7 @@ import { useUpdatePersonalData } from '@/core/services/mutations';
 import { useState, useEffect } from 'react';
 import formatDate from '@/core/utils/formatDate';
 
-function PersonalDataForm({ data }) {
+function PersonalDataForm({ data  }) {
     const [isEdit, setIsEdit] = useState(false);
     const { mutate, isPending } = useUpdatePersonalData();
 

@@ -1,19 +1,22 @@
 import Link from "next/link";
+import TourCard from "../card";
+import NotFoundTour from "./notFoundTour";
 
 function TourList({ toursData }) {
-    
-    if (!toursData || toursData.length === 0) return <p>نتیجه‌ای یافت نشد</p>;
+
+    if (!toursData || toursData.length === 0) return <NotFoundTour/>;
 
     return (
-        <main>
-            {toursData?.map((tour) => (
-                <section key={tour.id} className="border rounded-sm m-4">
-                    <h2>{tour?.title}</h2>
-                    <Link href={`/tours/${tour?.id}`} className="bg-blue-500 text-white">رزرو</Link>
-                </section>
-            ))}
-        </main>
+        <div className="min-h-[700px] max-w-[1440px] mx-auto mt-20 px-6 md:px-0">
+            <Link className="text-2xl md:text-[32px]" href={"/"}>همه تورها</Link>
+                <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    {toursData?.map((tour) => (
+                        <TourCard key={tour.id} {...tour} />
+                    ))}
+                </div>
+        </div>
     );
 }
 
 export default TourList;
+

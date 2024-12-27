@@ -55,12 +55,36 @@ const useUpdateAccountInfo = () => {
   const mutationFn = (data) => api.put("user/profile", data);
 
   const onSuccess = () => {
-      queryClient.invalidateQueries({ queryKey: ["user-data"] });
+    queryClient.invalidateQueries({ queryKey: ["user-data"] });
   };
 
   return useMutation({ mutationFn, onSuccess });
 };
 
+const useAddToBasket = () => {
+  const mutationFn = (id) => api.put(`basket/${id}`);
 
+  return useMutation({ mutationFn });
+};
 
-export { useSendOtp, useCheckOtp, useUpdateBankAccount, useUpdatePersonalData, useUpdateAccountInfo };
+const useCheckout = () => {
+  const queryClient = useQueryClient();
+
+  const mutationFn = (data) => api.post("order", data);
+
+  const onSuccess = () => {
+    queryClient.invalidateQueries({ queryKey: ["user/tours"] });
+  };
+
+  return useMutation({ mutationFn, onSuccess });
+};
+
+export {
+  useSendOtp,
+  useCheckOtp,
+  useUpdateBankAccount,
+  useUpdatePersonalData,
+  useUpdateAccountInfo,
+  useAddToBasket,
+  useCheckout
+};

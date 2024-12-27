@@ -1,12 +1,13 @@
 "use client";
 
 import { useCheckOtp } from "@/core/services/mutations";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import OTPInput from "react-otp-input";
 
 function CheckOtp({ mobile, setStep, setIsOpen}) {
   const [code , setCode] = useState("")
-
+  const router = useRouter();
   const { isPending, mutate } = useCheckOtp();
 
   
@@ -20,6 +21,7 @@ function CheckOtp({ mobile, setStep, setIsOpen}) {
       {
         onSuccess: async (data) => {
           setIsOpen(false);
+          router.push("/")
         },
         onError: (error) => {
           console.log(error.response?.data);

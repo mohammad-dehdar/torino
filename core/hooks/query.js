@@ -3,12 +3,12 @@ import { useRouter, useSearchParams } from "next/navigation";
 const useQuery = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const params = new URLSearchParams(String(searchParams));
+  const params = new URLSearchParams(searchParams);
 
   const addQuery = (key, value) => {
     value = String(value);
     params.set(key, value);
-    router.replace(`?${params}`);
+    router.replace({ pathname: router.pathname, search: params.toString() });
   };
 
   const removeQuery = (key) => {
@@ -21,10 +21,11 @@ const useQuery = () => {
   };
 
   const clearQuery = () => {
-    router.replace('/');
+    router.replace({ pathname: router.pathname });
   };
 
   return { addQuery, removeQuery, getQuery, clearQuery };
 };
+
 
 export default useQuery;
