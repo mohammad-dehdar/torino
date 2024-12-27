@@ -1,6 +1,7 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
+
+import useQuery from "@/core/hooks/query";
 import Image from "next/image";
 import Link from "next/link";
 
