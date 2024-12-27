@@ -78,7 +78,7 @@ function TourDetailsPage({tourData}) {
                                 </div>
                             </div>
                             <div className="hidden md:flex  mt-14 flex-row-reverse justify-between items-center">
-                                <ReserveButton />
+                                <ReserveButton id={tourData.id} />
                                 <div className="text-complementary text-2xl  font-semibold justify-self-end">
                                     {formatPrice(tourData.price)} <span className="text-sm text-gray-600">تومان</span>
                                 </div>
