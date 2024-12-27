@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 
-function DropDownMenu({ mobile }) {
+function DropDownMenu({ mobile, setIsOpenModal }) {
     const router = useRouter()
 
     const logOutHandler = () => {
@@ -12,7 +12,12 @@ function DropDownMenu({ mobile }) {
         document.cookie = "refreshToken=; max-age=0";
         router.push("/")
     }
-   
+
+    const profileHandler = () => {
+        router.push("/profile")
+        setIsOpenModal(false)
+    }
+
     return (
         <div className="w-[157px] md:w-[246px] absolute md:-left-5 md:top-10 mt-2 rounded-xl shadow-lg bg-white ring-1 ring-black ring-opacity-5 ml-2">
             <div className="py" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
@@ -28,7 +33,7 @@ function DropDownMenu({ mobile }) {
                         <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                         <circle cx="12" cy="7" r="4"></circle>
                     </svg>
-                    <span onClick={() => router.push("/profile")}>اطلاعات حساب کاربری</span>
+                    <span onClick={profileHandler}>اطلاعات حساب کاربری</span>
                 </Link>
                 <a href="#" className="flex items-center gap-2 px-4 py-3 text-xs text-rose-600 hover:bg-gray-100" role="menuitem">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

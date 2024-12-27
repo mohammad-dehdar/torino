@@ -1,15 +1,17 @@
 'use client'
 
-import React from 'react'
 import BankAccountForm from './bankAcoountForm'
 import PersonalDataForm from './personalDataForm'
 import { useGetUserData } from '@/core/services/queries'
 import AccountInfoForm from './AccountInfoForm.js'
 import { ThreeDots } from 'react-loader-spinner'
+import { useRouter } from 'next/navigation'
 
 function Profile() {
   const { data, isPending } = useGetUserData()
+  const router = useRouter()
 
+  if(!data?.data.mobile) return router.push("/")
   if (isPending) return (
     <div className='min-h-svh flex  justify-center'><ThreeDots
       visible={true}
