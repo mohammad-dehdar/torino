@@ -13,7 +13,7 @@ function MyTours() {
     if (isPending) return <div>loading...</div>
 
     return (
-        <div className="mx-auto mt-5 space-y-4 px-2">
+        <div className="mx-auto mt-5 space-y-4">
             {data?.data?.map((tour) => (
                 <div key={tour.id} className="border rounded-[10px] shadow-md p-3 bg-white">
                     <div className="flex items-center justify-between md:justify-start md:gap-8 mb-2">

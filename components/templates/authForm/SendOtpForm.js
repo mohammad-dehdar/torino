@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 
 import { useSendOtp } from "@/core/services/mutations";
 import { isValidMobile } from "@/core/utils/validation";
+import { X } from "lucide-react";
 
 function SendOTPForm({ mobile, setMobile, setStep, setIsOpen }) {
   const [error, setError] = useState("");
@@ -35,7 +36,7 @@ function SendOTPForm({ mobile, setMobile, setStep, setIsOpen }) {
 
   return (
     <form onSubmit={sendOtpHandler} className='relative w-[358px] h-[362px] md:w-[561px] md:h-[362px]  mx-auto bg-white rounded-3xl  flex flex-col  items-center justify-center'>
-      <div className='absolute top-4 left-5 font-bold cursor-pointer' onClick={() => setIsOpen(false)}>×</div>
+      <div className='absolute top-4 left-5 font-bold cursor-pointer' onClick={() => setIsOpen(false)}><X className="hover:text-rose-800 transition-all ease-out"/></div>
       <h3 className='text-[22px] font-semibold'>ورود به تورینو</h3>
       <div className='mt-16  flex flex-col gap-2 font-light'>
         <label htmlFor='input'>شماره موبایل خود را وارد کنید</label>

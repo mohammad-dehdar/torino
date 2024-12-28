@@ -1,8 +1,10 @@
-import React from 'react'
+'use client'
+
+import TransactionsPage from '@/components/templates/Profile/transactions/page'
 
 function page() {
   return (
-    <div>تراکنش ها</div>
+    <TransactionsPage/>
   )
 }
 

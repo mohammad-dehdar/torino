@@ -34,4 +34,10 @@ const useGetUserTours = () => {
   return useQuery({ queryFn, queryKey });
 };
 
-export { useGetUserData, useGetTours , useGetBasket , useGetUserTours };
+const useGetUserTransactions = () => {
+  const queryFn = () => api.get("user/transactions");
+  const queryKey = ["user-transactions"];
+
+  return useQuery({ queryFn, queryKey });
+};
+export { useGetUserData, useGetTours , useGetBasket , useGetUserTours , useGetUserTransactions };

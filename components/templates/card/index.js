@@ -23,14 +23,16 @@ const TourCard = ({
     const duration = Math.ceil((end - start) / (1000 * 60 * 60 * 24))
 
     return (
-        <div className="group flex flex-col overflow-hidden rounded-[10px] bg-white border">
-            <Link href={`/tour/${id}`} className="relative w-full overflow-hidden">
-                <Image
-                    src={image}
-                    alt={title}
-                    width={700}
-                    height={800}
-                    className="transition-transform duration-300 scale-105 group-hover:scale-110"
+        <div className="group flex flex-col overflow-hidden rounded-[10px] bg-white border hover:shadow-xl transition-shadow duration-300 cursor-pointer group">
+            <Link href={`/tour/${id}`} className="image-container">
+                <Image 
+                    src={image} 
+                    alt={title} 
+                    width={400} 
+                    height={250} 
+                    quality={90} 
+                    objectFit="cover"
+                    className="rounded-md"
                 />
             </Link>
             <div className="flex flex-col gap-2 divide-y">

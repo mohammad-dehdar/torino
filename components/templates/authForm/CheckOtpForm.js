@@ -1,6 +1,7 @@
 "use client";
 
 import { useCheckOtp } from "@/core/services/mutations";
+import { MoveLeft } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -66,7 +67,7 @@ function CheckOtp({ mobile, setStep, setIsOpen }) {
           className="absolute top-4 left-5 font-bold cursor-pointer"
           onClick={() => setStep(1)}
         >
-          ←
+          <MoveLeft className="transition-all ease-out hover:text-rose-600" />
         </div>) : null
       }
       <h3 className="text-[22px] md:text-[28px] font-semibold">کد تایید را وارد کنید.</h3>

@@ -9,8 +9,8 @@ import { usePathname } from "next/navigation";
 const navbar = [
     { id: 1, href: "/", title: "صفحه اصلی" },
     { id: 2, href: "/services", title: "خدمات گردشگری" },
-    { id: 3, href: "/about", title: "درباره ما" },
-    { id: 4, href: "/contact", title: "تماس با ما" },
+    { id: 3, href: "/about-us", title: "درباره ما" },
+    { id: 4, href: "/contact-us", title: "تماس با ما" },
 ];
 
 function Header() {
