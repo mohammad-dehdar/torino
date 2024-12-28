@@ -63,7 +63,7 @@ const features = [
 ];
 
 
-// Page Component
+
 export const metadata = {
   title: 'خدمات گردشگری | تورینو',
   description: 'خدمات گردشگری تورینو - ارائه دهنده بهترین تورهای داخلی و خارجی',

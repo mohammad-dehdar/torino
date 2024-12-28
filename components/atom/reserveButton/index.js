@@ -8,24 +8,24 @@ import MinimalModal from '../paymentModal';
 
 function ReserveButton({ id }) {
   const { mutate, isPending } = useAddToBasket();
-  const [isModalOpen, setIsModalOpen] = useState(false); // 🛠️ اصلاح useState
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const router = useRouter();
 
   const cartHandler = () => {
     if (isPending) return;
 
-    setIsModalOpen(true); // مدال باز می‌شود
+    setIsModalOpen(true);
 
     mutate(id, {
       onSuccess: (data) => {
         toast.success(data.data.message);
         setTimeout(() => {
           router.push('/checkout');
-        }, 1000); // برای تجربه بهتر کاربر
+        }, 1000); 
       },
       onError: (error) => {
         console.error(error);
-        setIsModalOpen(false); // بستن مدال در صورت خطا
+        setIsModalOpen(false); 
         toast.error('وارد حساب کاربری خود بشوید');
       },
     });
@@ -41,7 +41,6 @@ function ReserveButton({ id }) {
           رزرو و خرید
         </button>
       </div>
-      {/* مدال با وضعیت صحیح */}
       <MinimalModal isOpen={isModalOpen} message="در حال انتقال به صفحه پرداخت هستید..." />
     </>
   );
