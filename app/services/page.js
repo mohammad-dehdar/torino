@@ -1,15 +1,15 @@
 // app/services/page.tsx
 import React from 'react';
-import { 
-  Plane, 
-  Hotel, 
-  Bus, 
-  Globe, 
-  Compass, 
-  CreditCard, 
-  Users, 
+import {
+  Plane,
+  Hotel,
+  Bus,
+  Globe,
+  Compass,
+  CreditCard,
+  Users,
   PhoneCall,
-  ChevronLeft 
+  ChevronLeft
 } from 'lucide-react';
 import Link from 'next/link';
 import ServiceCard from '@/components/templates/servicesPage/serviceCard';
@@ -72,7 +72,7 @@ export const metadata = {
 async function TourismServices() {
   return (
     <div className="min-h-screen bg-gray-50 pb-12">
-      
+
       <div className="relative bg-green-400/10 py-16 mb-12">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -83,13 +83,13 @@ async function TourismServices() {
               با ما تجربه سفری متفاوت و به یادماندنی را رقم بزنید
             </p>
             <div className="flex justify-center gap-4">
-              <Link 
+              <Link
                 href="/consultation"
                 className="bg-primary text-white px-8 py-3 rounded-xl font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
               >
                 مشاوره رایگان
               </Link>
-              <Link 
+              <Link
                 href="/contact"
                 className="bg-white text-primary px-8 py-3 rounded-xl font-medium hover:bg-gray-50 transition-colors"
               >
@@ -131,7 +131,7 @@ async function TourismServices() {
           </p>
           <div className="flex justify-center items-center gap-2 text-primary text-lg font-bold">
             <PhoneCall className="w-6 h-6" />
-            ۰۲۱-۱۲۳۴۵۶۷۸
+            ۰۲۱-۱۸۴۰
           </div>
         </div>
       </div>

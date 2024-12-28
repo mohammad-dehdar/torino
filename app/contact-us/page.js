@@ -7,20 +7,20 @@ function ContactUs() {
                 <div className="flex flex-col items-center gap-2">
                     <MapPin size={36} className="text-primary" />
                     <h3 className="text-lg font-semibold">آدرس</h3>
-                    <p className="text-gray-600 text-sm">تهران، خیابان اصلی، کوچه 123</p>
+                    <p className="text-gray-600 text-sm">تهران، خیابان کریم خان</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
                     <Phone size={36} className="text-primary" />
                     <h3 className="text-lg font-semibold">تلفن</h3>
-                    <p className="text-gray-600 text-sm">021-12345678</p>
+                    <p className="text-gray-600 text-sm"> ۰۲۱-۱۸۴۰</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
                     <Mail size={36} className="text-primary" />
                     <h3 className="text-lg font-semibold">ایمیل</h3>
-                    <p className="text-gray-600 text-sm">info@yourwebsite.com</p>
+                    <p className="text-gray-600 text-sm">info@torino.com</p>
                 </div>
             </section>
-            
+
             <section className="my-16">
                 <h2 className="text-2xl font-semibold mb-6 text-center">ارسال پیام</h2>
                 <form className="max-w-lg mx-auto bg-gray-50 p-6 rounded-xl shadow-md flex flex-col gap-4">

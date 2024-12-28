@@ -4,10 +4,29 @@ import useQuery from '@/core/hooks/query';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle, XCircle, Home } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 function PaymentContent() {
   const { getQuery } = useQuery();
   const status = getQuery('status');
+  const router = useRouter();
+
+  useEffect(() => {
+    window.history.replaceState(null, '', window.location.href);
+  }, []);
+
+  useEffect(() => {
+    const handlePopState = () => {
+      router.replace('/');
+    };
+
+    window.addEventListener('popstate', handlePopState);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [router]);
 
   if (status === 'success') {
     return (
