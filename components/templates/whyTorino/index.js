@@ -1,24 +1,7 @@
 'use client'
 
-import ImageSlider from './swipper'
-const slides = [
-    {
-        image: '/images/slider-1.png',
-        title: 'اسلاید اول',
-    },
-    {
-        image: '/images/slider-2.png',
-        title: 'اسلاید دوم',
-    },
-    {
-        image: '/images/slider-3.png',
-        title: 'اسلاید دوم',
-    },
-    {
-        image: '/images/slider-4.png',
-        title: 'اسلاید دوم',
-    },
-];
+import SliderComponent from './Swiper';
+
 
 function WhyTorino() {
     return (
@@ -36,7 +19,7 @@ function WhyTorino() {
                         </p>
                     </div>
                 </div>
-                <ImageSlider slides={slides}/>
+                <SliderComponent/>
             </div>
         </div>
     )

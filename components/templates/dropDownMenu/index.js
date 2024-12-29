@@ -8,11 +8,16 @@ function DropDownMenu({ mobile, setIsOpenModal }) {
     const router = useRouter()
 
     const logOutHandler = () => {
-        document.cookie = "accessToken=; max-age=0";
-        document.cookie = "refreshToken=; max-age=0";
-        router.push("/")
+        document.cookie = "accessToken=; max-age=0; path=/";
+        document.cookie = "refreshToken=; max-age=0; path=/";
+        window.location.replace("/");
     }
-
+    const confirmLogOutHandler = () => {
+        const userConfirmed = window.confirm("آیا مطمئن هستید که می‌خواهید از حساب کاربری خود خارج شوید؟");
+        if (userConfirmed) {
+            logOutHandler();
+        }
+    }
     const profileHandler = () => {
         router.push("/profile")
         setIsOpenModal(false)
@@ -35,14 +40,14 @@ function DropDownMenu({ mobile, setIsOpenModal }) {
                     </svg>
                     <span onClick={profileHandler}>اطلاعات حساب کاربری</span>
                 </Link>
-                <a href="#" className="flex items-center gap-2 px-4 py-3 text-xs text-rose-600 hover:bg-gray-100" role="menuitem">
+                <button href="#" className="flex w-full rounded-b-2xl items-center gap-2 px-4 py-3 text-xs text-rose-600 hover:bg-gray-100" role="menuitem">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                         <polyline points="16 17 21 12 16 7"></polyline>
                         <line x1="21" y1="12" x2="9" y2="12"></line>
                     </svg>
-                    <span onClick={logOutHandler}>خروج از حساب کاربری</span>
-                </a>
+                    <span onClick={confirmLogOutHandler}>خروج از حساب کاربری</span>
+                </button>
             </div>
         </div>
     )
