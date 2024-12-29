@@ -5,7 +5,7 @@ import SliderComponent from './Swiper';
 
 function WhyTorino() {
     return (
-        <div className='mt-40 mb-8 mx-8 md:mx-0'>
+        <div className='mt-20 md:mt-32 mb-8 mx-8 md:mx-0'>
             <div className='md:flex max-w-[1440px] mx-auto'>
                 <div className='w-1/2'>
                     <div className='flex items-center gap-3'>
