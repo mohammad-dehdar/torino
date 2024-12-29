@@ -48,7 +48,7 @@ const SearchForm = () => {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto p-4 mt-10">
+    <div className="w-full md:w-fit  mx-auto p-4 mt-10">
       <h2 className="text-center font-medium text-[#595959] md:text-[28px] mb-8">
         <span className="text-primary">تورینو</span> برگزار کننده بهترین تور های داخلی و خارجی
       </h2>
@@ -57,7 +57,7 @@ const SearchForm = () => {
         onSubmit={handleSubmit(submitHandler)}
         className="relative bg-white rounded-3xl border p-4"
       >
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="relative">
             <div className="absolute right-3 top-1/2 -translate-y-1/2">
               <MapPin className="h-5 w-5 text-gray-400" />
@@ -90,8 +90,8 @@ const SearchForm = () => {
             </select>
           </div>
 
-          <div className="relative">
-            <div className="absolute right-3 top-1/2 -translate-y-1/2">
+          <div className="relative col-span-2 md:col-span-1 border px-3 py-2 rounded-lg md:w-fit ">
+            <div className="absolute right-3 top-1/2 -translate-y-1/2 mx-auto">
               <Calendar className="h-5 w-5 text-gray-400" />
             </div>
             <Controller
@@ -114,7 +114,7 @@ const SearchForm = () => {
 
           <button
             type="submit"
-            className="w-full h-full bg-primary text-white px-6 py-2 rounded-xl hover:bg-primary/90 transition-colors"
+            className="w-full h-full bg-primary col-span-2 md:col-span-1 text-white px-4 py-2 rounded-xl hover:bg-primary/90 transition-colors md:mr-2"
           >
             جستجو
           </button>

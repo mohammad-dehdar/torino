@@ -29,7 +29,7 @@ function AuthForm() {
                 <span>{data.data.mobile}</span>
                 <Image src={"/icons/arrow-down.svg"} width={24} height={24} alt="پروفایل کاربر" priority className="w-[24px] h-[24px]"/>
             </button>
-            {isModalOpen && <DropDownMenu mobile={data.data.mobile} setIsOpenModal={setIsOpenModal} />}
+            {isModalOpen && <DropDownMenu mobile={data.data.mobile} setIsOpenModal={setIsOpenModal} isModalOpen={isModalOpen} />}
         </div>
     );
 

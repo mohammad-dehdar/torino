@@ -1,5 +1,6 @@
 "use client";
 
+import ButtonLoader from "@/components/atom/buttonLoader/ButtonLoader";
 import { useCheckOtp } from "@/core/services/mutations";
 import { MoveLeft } from "lucide-react";
 import Link from "next/link";
@@ -11,6 +12,7 @@ import OTPInput from "react-otp-input";
 function CheckOtp({ mobile, setStep, setIsOpen }) {
   const [code, setCode] = useState("");
   const [timer, setTimer] = useState(10);
+  const [isError, setIsError ]= useState("");
   const [isTimerActive, setIsTimerActive] = useState(true);
 
   const router = useRouter();
@@ -42,7 +44,9 @@ function CheckOtp({ mobile, setStep, setIsOpen }) {
           router.push("/");
         },
         onError: (error) => {
-          console.log(error.response?.data);
+          console.log(error);
+          
+          setIsError(error?.message);
         },
       }
     );
@@ -73,6 +77,7 @@ function CheckOtp({ mobile, setStep, setIsOpen }) {
       <h3 className="text-[22px] md:text-[28px] font-semibold">کد تایید را وارد کنید.</h3>
       <div className="mt-8 mb-2 flex flex-col gap-2 font-light">
         <p className="font-medium text-center">کد تایید به شماره {mobile} ارسال شد .</p>
+        {isError && <p className="text-red-500 text-center">{isError}</p>}
         <div style={{ direction: "ltr" }}>
           <OTPInput
             value={code}
@@ -108,14 +113,15 @@ function CheckOtp({ mobile, setStep, setIsOpen }) {
             ارسال مجدد کد
           </button>
         )}
-        <span className="text-complementary text-sm font-semibold cursor-pointer border-b hover:border-b-complementary" onClick={() => setStep(1)}>تغییر شماره!</span>
+       
       </div>
-      <button
+      {/* <button
         type="submit"
         className="w-[258px] h-[54px] md:w-[491px] md:h-[54px] bg-primary rounded-lg text-white text-lg font-medium transition-colors ease-out hover:bg-secondary mt-10"
       >
         ورود به تورینو
-      </button>
+      </button> */}
+      <ButtonLoader isPending={isPending}/>
     </form>
   );
 }

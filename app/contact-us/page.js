@@ -108,7 +108,7 @@ function ContactPage() {
                             </div>
                             <div className="flex items-center space-x-2 space-x-reverse">
                                 <Mail className="h-5 w-5" />
-                                <span>info@travelsiteexample.com</span>
+                                <span>info@toriono.com</span>
                             </div>
                             <div className="flex items-center space-x-2 space-x-reverse">
                                 <MapPin className="h-5 w-5" />

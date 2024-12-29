@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function CommercialBanner() {
@@ -11,7 +12,7 @@ function CommercialBanner() {
             </div>
             <div className='md:w-2/6 py-4 md:py-0 flex md:flex-col items-center justify-center gap-4'>
                 <p className='flex gap-1.5 text-[20px] md:text-[28px] font-extrabold'>021-1840<span className='w-6 h-6'><Image src={'/icons/bannerCall.svg'} width={24} height={24} alt='تماس' className='md:mt-1'/></span></p>
-                <button className='bg-secondary py-2 px-10 rounded-[10px] text-white transition-all ease-out hover:bg-primary'>اطلاعات بیشتر</button>
+                <Link href={"/services"} className='bg-secondary py-2 px-10 rounded-[10px] text-white transition-all ease-out hover:bg-primary'>اطلاعات بیشتر</Link>
             </div>
         </div>
     )
