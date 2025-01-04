@@ -7,11 +7,6 @@ const nextConfig = {
                 hostname: 'localhost',
                 port: '6500',
                 pathname: '/static/images/**',
-            },
-            {
-                protocol: 'https',
-                hostname: 'torino-serve.vercel.app',
-                pathname: '/static/images/**',
             }
         ],
     },
