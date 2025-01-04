@@ -4,8 +4,8 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'http',
-                hostname: 'localhost',
-                port: '6500',
+                hostname: 'torino-serve.vercel.app',
+                port: '',
                 pathname: '/static/images/**',
             },
         ],
