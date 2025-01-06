@@ -1,32 +1,9 @@
-'use client';
-
-import useQuery from '@/core/hooks/query';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle, XCircle, Home } from 'lucide-react';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
-function PaymentContent() {
-  const { getQuery } = useQuery();
-  const status = getQuery('status');
-  const router = useRouter();
-
-  useEffect(() => {
-    window.history.replaceState(null, '', window.location.href);
-  }, []);
-
-  useEffect(() => {
-    const handlePopState = () => {
-      router.replace('/');
-    };
-
-    window.addEventListener('popstate', handlePopState);
-
-    return () => {
-      window.removeEventListener('popstate', handlePopState);
-    };
-  }, [router]);
+function PaymentContent({ searchParams }) {
+  const status = searchParams?.status;
 
   if (status === 'success') {
     return (
@@ -88,12 +65,12 @@ function PaymentContent() {
             متأسفانه پرداخت شما با مشکل مواجه شد. لطفاً دوباره تلاش کنید یا با پشتیبانی تماس بگیرید.
           </p>
           <div className="flex gap-4 mt-4">
-            <button
-              onClick={() => window.history.back()}
+            <Link
+              href="/"
               className="bg-primary px-6 py-3 text-lg rounded-xl text-white font-medium hover:bg-primary/90 transition-colors duration-200 shadow-lg shadow-primary/20"
             >
               تلاش مجدد
-            </button>
+            </Link>
             <Link
               href="/"
               className="bg-gray-100 px-6 py-3 text-lg rounded-xl text-gray-700 font-medium hover:bg-gray-200 transition-colors duration-200 flex items-center gap-2"

@@ -1,13 +1,7 @@
-"use client";
 import PaymentContent from '@/components/templates/payment';
-import { Suspense } from 'react';
 
-function Payment() {
-  return (
-    <Suspense>
-      <PaymentContent />
-    </Suspense>
-  )
+function Payment({ searchParams }) {
+  return <PaymentContent searchParams={searchParams} />;
 }
 
 export default Payment;
