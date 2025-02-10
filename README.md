@@ -46,10 +46,10 @@ Once the backend is running, you can start the frontend.
 ## Screenshots
 Here are some images of the project:
 
-![Home Page](https://github.com/user-attachments/assets/b352cb2d-1dd9-4d95-af98-b1b97524165b)
-![OTP](https://github.com/user-attachments/assets/0c72000e-a253-430f-8c81-f0dc27b8cb45)
-![OTP - 2](https://github.com/user-attachments/assets/1481cd47-de13-47a4-af9d-4ea60aaa7d37)
-![Tour detail](https://github.com/user-attachments/assets/3bda5a53-e767-42d2-84e8-3ae83e3b115a)
+![HomePage](https://github.com/user-attachments/assets/670fa7ca-c5c0-46a2-8e2b-3671501e0f84)
+![OTP](https://github.com/user-attachments/assets/22b317ea-befe-48da-be53-9a7a968edba8)
+![OTP-2](https://github.com/user-attachments/assets/62a44101-4091-4f7f-9c74-31eec4078e82)
+![Tour-details](https://github.com/user-attachments/assets/f11a3039-302c-4e8f-ab45-28231fdc1788)
 
 ## Features
 - Travel ticket booking
