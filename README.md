@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Torino
+
+Torino is a travel ticket booking and tour reservation application. This project consists of a front-end and a back-end, and the back-end must be running before using the front-end.
 
 ## Getting Started
 
-First, run the development server:
+### 1. Download and Run the Backend
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Before running the front-end, make sure the back-end is up and running. You can download the back-end from the following link:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Download Backend](https://drive.google.com/file/d/1zw2fSHFOf7h05ZgY8H2NeUfGE0n8JnVZ/view?usp=sharing)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#### Steps to Run the Backend:
+1. Extract the backend ZIP file.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+5. Start the backend server:
+   ```bash
+   npm start
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 2. Run the Frontend
 
-## Learn More
+Once the backend is running, you can start the frontend.
 
-To learn more about Next.js, take a look at the following resources:
+#### Steps to Run the Frontend:
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/mohammad-dehdar/torino.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd torino
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Screenshots
+Here are some images of the project:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Home Page](https://github.com/user-attachments/assets/b352cb2d-1dd9-4d95-af98-b1b97524165b)
+![OTP](https://github.com/user-attachments/assets/0c72000e-a253-430f-8c81-f0dc27b8cb45)
+![OTP - 2](https://github.com/user-attachments/assets/1481cd47-de13-47a4-af9d-4ea60aaa7d37)
+![Tour detail](https://github.com/user-attachments/assets/3bda5a53-e767-42d2-84e8-3ae83e3b115a)
 
-## Deploy on Vercel
+## Features
+- Travel ticket booking
+- Tour reservation system
+- User-friendly interface
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
